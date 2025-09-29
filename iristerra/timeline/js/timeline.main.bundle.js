@@ -629,7 +629,9 @@ ${plantasNav.map((f) => {
     }
     loadTimeline();
     function loadTimeline() {
-      fetch(PREFIXURL +"timeline.json?r=" + Date.now().toString()).then((response) => response.json()).then((data) => {
+     // fetch(PREFIXURL +"timeline.json?r=" + Date.now().toString()).then((response) => response.json()).then((data) => {
+        fetch(PREFIXURL +"backend.php?file=timeline.json&loadFile=true&r=" + Date.now().toString()).then((response) => response.json()).then((data) => {
+     
         ACTUALDATA = sortByDateStart(data);
         TIMELINE_DATA2 = [...ACTUALDATA];
         filterBy("todos");
