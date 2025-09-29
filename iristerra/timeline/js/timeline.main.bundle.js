@@ -283,7 +283,7 @@
       const formData = new FormData();
       formData.append("image", file);
       formData.append("prefix", obj.name || "plant");
-      fetch(PREFIXURL +PREFIXURL + "upload.php", {
+      fetch(PREFIXURL + "upload.php", {
         method: "POST",
         body: formData
       }).then((response) => response.json()).then((data) => {
