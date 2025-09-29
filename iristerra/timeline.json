@@ -1,1 +1,787 @@
-[{"id":"1","date_start":"13/07/2025","date_end":"01/12/2025","labels":[{"date":"13/07/2025","label":"trasplante plantín al cantero B"},{"date":"17/08/2025","label":"Inicio cosecha"}],"color":"#5cb701","name":"lechuga (invernadero)","fotos":["fotos/lechugas (invernadero)_68be29b38be52.jpg","fotos/lechugas (invernadero)_68be2a87a28ec.jpg"],"images":[{"img":"fotos/lechugas (invernadero)_68be29b38be52.jpg","date":"Sun Sep 07 2025"},{"img":"fotos/lechugas (invernadero)_68be2a87a28ec.jpg","date":"Sun Sep 07 2025"}],"info":"Crecieron muy grandes!\n"},{"id":"8","name":"acelga (144)","date_start":"04/8/2025","date_end":"01/07/2026","color":"#148026","labels":[{"date":"04/08/2025","label":"siembra en semillero"},{"date":"20/08/2025","label":"Inicio germinación"},{"date":"09/09/2025","label":"Trasplante a cantero 3"}],"fotos":["fotos/acelgas (144)_68bef0c954f6c.jpg","fotos/acelgas (144)_68c180de29834.jpg"],"images":[{"img":"fotos/acelgas (144)_68bef0c954f6c.jpg","date":"Mon Sep 08 2025"},{"img":"fotos/acelgas (144)_68c180de29834.jpg","date":"Wed Sep 10 2025"}]},{"id":"9","name":"lechuga grandrapi (500)","date_start":"04/8/2025","date_end":"01/04/2026","color":"#49d237","labels":[{"date":"04/8/2025","label":"siembra en semillero"},{"date":"08/9/2025","label":"transplante a cantero 3"},{"date":"22/08/2025","label":"Inicio germinación "}],"fotos":["fotos/lechugas grandrapi  (500)_68beef71a1d55.jpg","fotos/lechugas grandrapi  (500)_68cc51db3685f.jpg","fotos/lechugas grandrapi  (500)_68cc51efa58ac.jpg"],"images":[{"img":"fotos/lechugas grandrapi  (500)_68beef71a1d55.jpg","date":"Mon Sep 08 2025"},{"img":"fotos/lechugas grandrapi  (500)_68cc51db3685f.jpg","date":"Thu Sep 18 2025"},{"img":"fotos/lechugas grandrapi  (500)_68cc51efa58ac.jpg","date":"Thu Sep 18 2025"}]},{"id":"2","date_start":"07/08/2025","date_end":"01/05/2026","labels":[{"date":"07/08/2025","label":"siembra sem"},{"date":"18/08/2025","label":"inicio germinación"},{"date":"11/09/2025","label":"trasplante 10un. a cantero 2"},{"date":"24/09/2025","label":"Trasplante cantero c (6)"}],"color":"#fb0435","name":"tomate redondo (24)","fotos":["fotos/tomates redondo (24)_68bef05205238.jpg"],"images":[{"img":"fotos/tomates redondo (24)_68bef05205238.jpg","date":"Mon Sep 08 2025"}]},{"id":"7","name":"berenjena Florida (96)","date_start":"07/8/2025","date_end":"01/04/2026","color":"#6711e8","labels":[{"date":"07/08/2025","label":"siembra en semillero"},{"date":"25/08/2025","label":"Inicio germinación"},{"date":"17/09/2025","label":"Trasplante a maceta (32)"}],"images":[],"fotos":[],"info":"% de germinación:20?"},{"id":"10","name":"Tomate perita amarillo  (62)","date_start":"07/08/2025","date_end":"01/04/2026","color":"#e6ce2d","labels":[{"date":"07/08/2025","label":"siembra sem"},{"date":"11/09/2025","label":"transplante 19un. a cantero 2 y 12 a cantero C(inv)  "},{"date":"18/08/2025","label":"inicio germinación"}],"fotos":["fotos/Tomate perita amarillo  (62)_68bef0256fd37.jpg","fotos/Tomate perita amarillo  (62)_68c9865b1b992.jpg"],"images":[{"img":"fotos/Tomate perita amarillo  (62)_68bef0256fd37.jpg","date":"Mon Sep 08 2025"},{"img":"fotos/Tomate perita amarillo  (62)_68c9865b1b992.jpg","date":"Tue Sep 16 2025"}]},{"id":"11","name":"Rabanito penca blanca (84)","date_start":"08/8/2025","date_end":"01/04/2026","color":"#ca16a3","labels":[{"date":"08/8/2025","label":"siembra en cantero A "},{"date":"17/09/2025","label":"comienza la cosecha"}],"images":[],"fotos":[]},{"id":"12","name":"Rabanito penca blanca  (26)","date_start":"09/8/2025","date_end":"01/04/2026","color":"#a50cb0","labels":[{"date":"09/8/2025","label":"siembra cantero B "},{"date":"15/9/25","label":"comenzaria la cosecha"}],"images":[]},{"id":"3","date_start":"12/08/2025","date_end":"01/04/2026","labels":[{"date":"12/08/2025","label":"siembra en maceta"},{"date":"16/09/2025","label":"trasplante a bancal junto al tomate"}],"color":"#007700","name":"perejil (35)","images":[{"img":"fotos/perejil (35)_68c98563917c5.jpg","date":"Tue Sep 16 2025"}],"fotos":["fotos/perejil (35)_68c98563917c5.jpg"]},{"id":"4","date_start":"12/08/2025","date_end":"01/04/2026","labels":[{"date":"12/08/2025","label":"siembra en maceta"},{"date":"16/09/2025","label":"trasplante a canteros junto a tomates"}],"color":"#55ff55","name":"Albahaca hoja ancha (35)","images":[],"fotos":[],"info":""},{"id":"5","date_start":"12/08/2025","date_end":"01/04/2026","labels":[{"date":"12/08/2025","label":"siembra en semillero"},{"date":"09/09/2025","label":"trasplante a bancal exterior 3"}],"color":"#009900","name":"radicheta (48)","images":[],"fotos":[]},{"id":"6","date_start":"12/08/2025","date_end":"01/04/2026","labels":[{"date":"12/08/2025","label":"siembra en maceta"}],"color":"#00bb00","name":"lechuga mantecosa (48)","images":[]},{"id":"13","name":"Aji dulce","date_start":"23/08/2025","date_end":"15/09/2025","color":"#ff0000","labels":[{"date":"23/08/2025","label":"Siembra maceta"},{"date":"15/09/2025","label":"Abandonamos, sin germinación"}],"images":[],"fotos":[],"info":"temperaturas muy bajas?"},{"id":"14","name":"Morrón 4 cascos","date_start":"23/08/2025","date_end":"15/09/2025","color":"#ab4400","labels":[{"date":"23/08/2025","label":"Siembra Semillero"},{"date":"14/09/2025","label":"abandonamos, sin germinar"}],"images":[],"fotos":[]},{"id":"15","name":"Rabanito","date_start":"23/08/2025","date_end":"01/01/2026","color":"#ab0072","labels":[{"date":"23/08/2025","label":"Siembra en invernadero"}],"images":[]},{"id":"16","name":"Zapallo tahitan (6)","date_start":"02/09/2025","date_end":"01/04/2026","color":"#e08e00","labels":[{"date":"02/09/2025","label":"Siembra"}],"images":[{"img":"fotos/Zapallo tahitan 6_68c985ed89083.jpg","date":"Tue Sep 16 2025"}],"fotos":["fotos/Zapallo tahitan 6_68c985ed89083.jpg"]},{"id":"17","name":"Pepino (12)","date_start":"02/09/2025","date_end":"01/04/2026","color":"#079141","labels":[{"date":"02/09/2025","label":"Siembra"},{"date":"24/09/2025","label":"Trasplante a cantero C (6)"}],"images":[],"fotos":[]},{"id":"18","name":"Zuccini (8)","date_start":"02/09/2025","date_end":"01/04/2026","color":"#00aa00","labels":[{"date":"02/09/2025","label":"Siembra"},{"date":"24/09/2025","label":"Trasplante canteroC (6)"}],"images":[{"img":"fotos/Zuccini 8_68c985a900493.jpg","date":"Tue Sep 16 2025"}],"fotos":["fotos/Zuccini 8_68c985a900493.jpg"]},{"id":"27","name":"Albahaca (?)","date_start":"09/09/2025","date_end":"01/04/2026","color":"#33bb66","labels":[{"date":"09/09/2025","label":"Siembra en semillero"}],"images":[],"fotos":[]},{"id":"28","name":"Radicheta (?)","date_start":"09/09/2025","date_end":"01/04/2026","color":"#00aa00","labels":[{"date":"09/09/2025","label":"Siembra en semillero"}],"images":[],"fotos":[]},{"id":"19","name":"Maiz (22)","date_start":"11/09/2025","date_end":"01/05/2026","color":"#ffff00","labels":[{"date":"11/09/2025","label":"Siembra(22) borde Este"},{"date":"19/09/2025","label":"Inicio germinación"},{"date":"24/09/2025","label":"hormigas!!"}],"images":[],"fotos":[]},{"id":"20","name":"Rabanito (96)","date_start":"12/09/2025","date_end":"01/11/2025","color":"#b553d0","labels":[{"date":"12/09/2025","label":"siembra directa"},{"date":"17/09/2025","label":"Germinan"}],"images":[],"fotos":[]},{"id":"21","name":"Rabanito Daikon (10)","date_start":"12/09/2025","date_end":"01/11/2025","color":"#b463d9","labels":[{"date":"12/09/2025","label":"siembra directa "},{"date":"17/09/2025","label":"Germinan"}],"images":[],"fotos":[]},{"id":"22","name":"Aji dulce (58)","date_start":"15/09/2025","date_end":"01/04/2026","color":"#ea5c1f","labels":[{"date":"15/09/2025","label":"Siembra semillero"}],"images":[],"fotos":[]},{"id":"23","name":"Morrón (48)","date_start":"15/09/2025","date_end":"01/04/2026","color":"#ff0000","labels":[{"date":"15/09/2025","label":"Siembra en semillero"}],"images":[],"fotos":[]},{"id":"24","name":"Tomate redondo (14)","date_start":"15/09/2025","date_end":"01/04/2026","color":"#ff0000","labels":[{"date":"15/09/2025","label":"Siembra maceta chica"}],"images":[],"fotos":[]},{"id":"25","name":"Perejil (7)","date_start":"15/09/2025","date_end":"01/04/2026","color":"#00aa00","labels":[{"date":"15/09/2025","label":"Siembra maceta chica"},{"date":"24/09/2025","label":"Trasplante cantero 3 (8)"}],"images":[],"fotos":[]},{"id":"26","name":"Albahaca (6)","date_start":"15/09/2025","date_end":"01/04/2026","color":"#00ff00","labels":[{"date":"15/09/2025","label":"Siembra maceta chica"}],"images":[],"fotos":[]},{"id":"29","name":"Berenjena Florida (16)","date_start":"16/09/2025","date_end":"01/04/2026","color":"#562eb2","labels":[{"date":"16/09/2025","label":"Siembra maceta"}],"images":[]},{"id":"30","name":"Albahaca (11)","date_start":"16/09/2025","date_end":"01/04/2026","color":"#22ec22","labels":[{"date":"16/09/2025","label":"Siembra maceta"}],"images":[]},{"id":"31","name":"Perejil (6)","date_start":"16/09/2025","date_end":"01/04/2026","color":"#0a850a","labels":[{"date":"16/09/2025","label":"siembra maceta"}],"images":[],"fotos":[]},{"id":"32","name":"Esponja vegetal (12)","date_start":"19/09/2025","date_end":"01/04/2025","color":"#9e8351","labels":[{"date":"19/09/2025","label":"Siembra en maceta"}],"images":[]},{"id":"33","name":"Zuccini (11)","date_start":"21/09/2025","date_end":"01/04/2026","color":"#a1ba32","labels":[{"date":"21/09/2025","label":"Siembra"}],"images":[],"fotos":[]},{"id":"34","name":"Pepino (6)","date_start":"21/09/2025","date_end":"01/04/2026","color":"#106117","labels":[{"date":"21/09/2025","label":"Siembra"}],"images":[],"fotos":[]},{"id":"35","name":"Zapallo chaqueño (6)","date_start":"21/09/2025","date_end":"01/04/2026","color":"#c48c1b","labels":[{"date":"21/09/2025","label":"Siembra"}],"images":[],"fotos":[]},{"id":"36","name":"Perejil (36)","date_start":"21/09/2025","date_end":"01/04/2026","color":"#377537","labels":[{"date":"21/09/2025","label":"Siembra"}],"images":[],"fotos":[]},{"id":"37","name":"Rabanito daikon (36)","date_start":"21/09/2025","date_end":"01/04/2026","color":"#00aa00","labels":[{"date":"21/09/2025","label":"Siembra cant 3"}],"images":[],"fotos":[]},{"id":"38","name":"Melón (8)","date_start":"28/09/2025","date_end":"01/04/2026","color":"#b9c096","labels":[{"date":"28/09/2025","label":"Siembra en maceta"}],"images":[]},{"id":"39","name":"Zuccini B (13)","date_start":"28/09/2025","date_end":"01/04/2026","color":"#a89a00","labels":[{"date":"28/09/2025","label":"Siembra en maceta"}],"images":[]},{"id":"40","name":"Cuerno de cuarzo","date_start":"28/09/2025","date_end":"28/09/2025","color":"#a7aeaa","labels":[{"date":"28/09/2025","label":"Se entierra el cuerno con cuarzo"}],"images":[],"fotos":[]}]
+[
+    {
+        "id": "1",
+        "date_start": "13/07/2025",
+        "date_end": "01/12/2025",
+        "labels": [
+            {
+                "date": "13/07/2025",
+                "label": "trasplante plantín al cantero B"
+            },
+            {
+                "date": "17/08/2025",
+                "label": "Inicio cosecha"
+            }
+        ],
+        "color": "#5cb701",
+        "name": "lechuga (invernadero)",
+        "fotos": [
+            "fotos/lechugas (invernadero)_68be29b38be52.jpg",
+            "fotos/lechugas (invernadero)_68be2a87a28ec.jpg"
+        ],
+        "images": [
+            {
+                "img": "fotos/lechugas (invernadero)_68be29b38be52.jpg",
+                "date": "Sun Sep 07 2025"
+            },
+            {
+                "img": "fotos/lechugas (invernadero)_68be2a87a28ec.jpg",
+                "date": "Sun Sep 07 2025"
+            }
+        ],
+        "info": "Crecieron muy grandes!\n"
+    },
+    {
+        "id": "8",
+        "name": "acelga (144)",
+        "date_start": "04/8/2025",
+        "date_end": "01/07/2026",
+        "color": "#148026",
+        "labels": [
+            {
+                "date": "04/08/2025",
+                "label": "siembra en semillero"
+            },
+            {
+                "date": "20/08/2025",
+                "label": "Inicio germinación"
+            },
+            {
+                "date": "09/09/2025",
+                "label": "Trasplante a cantero 3"
+            }
+        ],
+        "fotos": [
+            "fotos/acelgas (144)_68bef0c954f6c.jpg",
+            "fotos/acelgas (144)_68c180de29834.jpg"
+        ],
+        "images": [
+            {
+                "img": "fotos/acelgas (144)_68bef0c954f6c.jpg",
+                "date": "Mon Sep 08 2025"
+            },
+            {
+                "img": "fotos/acelgas (144)_68c180de29834.jpg",
+                "date": "Wed Sep 10 2025"
+            }
+        ]
+    },
+    {
+        "id": "9",
+        "name": "lechuga grandrapi (500)",
+        "date_start": "04/8/2025",
+        "date_end": "01/04/2026",
+        "color": "#49d237",
+        "labels": [
+            {
+                "date": "04/8/2025",
+                "label": "siembra en semillero"
+            },
+            {
+                "date": "08/9/2025",
+                "label": "transplante a cantero 3"
+            },
+            {
+                "date": "22/08/2025",
+                "label": "Inicio germinación "
+            }
+        ],
+        "fotos": [
+            "fotos/lechugas grandrapi  (500)_68beef71a1d55.jpg",
+            "fotos/lechugas grandrapi  (500)_68cc51db3685f.jpg",
+            "fotos/lechugas grandrapi  (500)_68cc51efa58ac.jpg"
+        ],
+        "images": [
+            {
+                "img": "fotos/lechugas grandrapi  (500)_68beef71a1d55.jpg",
+                "date": "Mon Sep 08 2025"
+            },
+            {
+                "img": "fotos/lechugas grandrapi  (500)_68cc51db3685f.jpg",
+                "date": "Thu Sep 18 2025"
+            },
+            {
+                "img": "fotos/lechugas grandrapi  (500)_68cc51efa58ac.jpg",
+                "date": "Thu Sep 18 2025"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "date_start": "07/08/2025",
+        "date_end": "01/05/2026",
+        "labels": [
+            {
+                "date": "07/08/2025",
+                "label": "siembra sem"
+            },
+            {
+                "date": "18/08/2025",
+                "label": "inicio germinación"
+            },
+            {
+                "date": "11/09/2025",
+                "label": "trasplante 10un. a cantero 2"
+            },
+            {
+                "date": "24/09/2025",
+                "label": "Trasplante cantero c (6)"
+            }
+        ],
+        "color": "#fb0435",
+        "name": "tomate redondo (24)",
+        "fotos": [
+            "fotos/tomates redondo (24)_68bef05205238.jpg"
+        ],
+        "images": [
+            {
+                "img": "fotos/tomates redondo (24)_68bef05205238.jpg",
+                "date": "Mon Sep 08 2025"
+            }
+        ]
+    },
+    {
+        "id": "7",
+        "name": "berenjena Florida (96)",
+        "date_start": "07/8/2025",
+        "date_end": "01/04/2026",
+        "color": "#6711e8",
+        "labels": [
+            {
+                "date": "07/08/2025",
+                "label": "siembra en semillero"
+            },
+            {
+                "date": "25/08/2025",
+                "label": "Inicio germinación"
+            },
+            {
+                "date": "17/09/2025",
+                "label": "Trasplante a maceta (32)"
+            }
+        ],
+        "images": [],
+        "fotos": [],
+        "info": "% de germinación:20?"
+    },
+    {
+        "id": "10",
+        "name": "Tomate perita amarillo  (62)",
+        "date_start": "07/08/2025",
+        "date_end": "01/04/2026",
+        "color": "#e6ce2d",
+        "labels": [
+            {
+                "date": "07/08/2025",
+                "label": "siembra sem"
+            },
+            {
+                "date": "11/09/2025",
+                "label": "transplante 19un. a cantero 2 y 12 a cantero C(inv)  "
+            },
+            {
+                "date": "18/08/2025",
+                "label": "inicio germinación"
+            }
+        ],
+        "fotos": [
+            "fotos/Tomate perita amarillo  (62)_68bef0256fd37.jpg",
+            "fotos/Tomate perita amarillo  (62)_68c9865b1b992.jpg"
+        ],
+        "images": [
+            {
+                "img": "fotos/Tomate perita amarillo  (62)_68bef0256fd37.jpg",
+                "date": "Mon Sep 08 2025"
+            },
+            {
+                "img": "fotos/Tomate perita amarillo  (62)_68c9865b1b992.jpg",
+                "date": "Tue Sep 16 2025"
+            }
+        ]
+    },
+    {
+        "id": "11",
+        "name": "Rabanito penca blanca (84)",
+        "date_start": "08/8/2025",
+        "date_end": "01/04/2026",
+        "color": "#ca16a3",
+        "labels": [
+            {
+                "date": "08/8/2025",
+                "label": "siembra en cantero A "
+            },
+            {
+                "date": "17/09/2025",
+                "label": "comienza la cosecha"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "12",
+        "name": "Rabanito penca blanca  (26)",
+        "date_start": "09/8/2025",
+        "date_end": "01/04/2026",
+        "color": "#a50cb0",
+        "labels": [
+            {
+                "date": "09/8/2025",
+                "label": "siembra cantero B "
+            },
+            {
+                "date": "15/9/25",
+                "label": "comenzaria la cosecha"
+            }
+        ],
+        "images": []
+    },
+    {
+        "id": "3",
+        "date_start": "12/08/2025",
+        "date_end": "01/04/2026",
+        "labels": [
+            {
+                "date": "12/08/2025",
+                "label": "siembra en maceta"
+            },
+            {
+                "date": "16/09/2025",
+                "label": "trasplante a bancal junto al tomate"
+            }
+        ],
+        "color": "#007700",
+        "name": "perejil (35)",
+        "images": [
+            {
+                "img": "fotos/perejil (35)_68c98563917c5.jpg",
+                "date": "Tue Sep 16 2025"
+            }
+        ],
+        "fotos": [
+            "fotos/perejil (35)_68c98563917c5.jpg"
+        ]
+    },
+    {
+        "id": "4",
+        "date_start": "12/08/2025",
+        "date_end": "01/04/2026",
+        "labels": [
+            {
+                "date": "12/08/2025",
+                "label": "siembra en maceta"
+            },
+            {
+                "date": "16/09/2025",
+                "label": "trasplante a canteros junto a tomates"
+            }
+        ],
+        "color": "#55ff55",
+        "name": "Albahaca hoja ancha (35)",
+        "images": [],
+        "fotos": [],
+        "info": ""
+    },
+    {
+        "id": "5",
+        "date_start": "12/08/2025",
+        "date_end": "01/04/2026",
+        "labels": [
+            {
+                "date": "12/08/2025",
+                "label": "siembra en semillero"
+            },
+            {
+                "date": "09/09/2025",
+                "label": "trasplante a bancal exterior 3"
+            }
+        ],
+        "color": "#009900",
+        "name": "radicheta (48)",
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "6",
+        "date_start": "12/08/2025",
+        "date_end": "01/04/2026",
+        "labels": [
+            {
+                "date": "12/08/2025",
+                "label": "siembra en maceta"
+            }
+        ],
+        "color": "#00bb00",
+        "name": "lechuga mantecosa (48)",
+        "images": []
+    },
+    {
+        "id": "13",
+        "name": "Aji dulce",
+        "date_start": "23/08/2025",
+        "date_end": "15/09/2025",
+        "color": "#ff0000",
+        "labels": [
+            {
+                "date": "23/08/2025",
+                "label": "Siembra maceta"
+            },
+            {
+                "date": "15/09/2025",
+                "label": "Abandonamos, sin germinación"
+            }
+        ],
+        "images": [],
+        "fotos": [],
+        "info": "temperaturas muy bajas?"
+    },
+    {
+        "id": "14",
+        "name": "Morrón 4 cascos",
+        "date_start": "23/08/2025",
+        "date_end": "15/09/2025",
+        "color": "#ab4400",
+        "labels": [
+            {
+                "date": "23/08/2025",
+                "label": "Siembra Semillero"
+            },
+            {
+                "date": "14/09/2025",
+                "label": "abandonamos, sin germinar"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "15",
+        "name": "Rabanito",
+        "date_start": "23/08/2025",
+        "date_end": "01/01/2026",
+        "color": "#ab0072",
+        "labels": [
+            {
+                "date": "23/08/2025",
+                "label": "Siembra en invernadero"
+            }
+        ],
+        "images": []
+    },
+    {
+        "id": "16",
+        "name": "Zapallo tahitan (6)",
+        "date_start": "02/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#e08e00",
+        "labels": [
+            {
+                "date": "02/09/2025",
+                "label": "Siembra"
+            }
+        ],
+        "images": [
+            {
+                "img": "fotos/Zapallo tahitan 6_68c985ed89083.jpg",
+                "date": "Tue Sep 16 2025"
+            }
+        ],
+        "fotos": [
+            "fotos/Zapallo tahitan 6_68c985ed89083.jpg"
+        ]
+    },
+    {
+        "id": "17",
+        "name": "Pepino (12)",
+        "date_start": "02/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#079141",
+        "labels": [
+            {
+                "date": "02/09/2025",
+                "label": "Siembra"
+            },
+            {
+                "date": "24/09/2025",
+                "label": "Trasplante a cantero C (6)"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "18",
+        "name": "Zuccini (8)",
+        "date_start": "02/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#00aa00",
+        "labels": [
+            {
+                "date": "02/09/2025",
+                "label": "Siembra"
+            },
+            {
+                "date": "24/09/2025",
+                "label": "Trasplante canteroC (6)"
+            }
+        ],
+        "images": [
+            {
+                "img": "fotos/Zuccini 8_68c985a900493.jpg",
+                "date": "Tue Sep 16 2025"
+            }
+        ],
+        "fotos": [
+            "fotos/Zuccini 8_68c985a900493.jpg"
+        ]
+    },
+    {
+        "id": "27",
+        "name": "Albahaca (?)",
+        "date_start": "09/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#33bb66",
+        "labels": [
+            {
+                "date": "09/09/2025",
+                "label": "Siembra en semillero"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "28",
+        "name": "Radicheta (?)",
+        "date_start": "09/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#00aa00",
+        "labels": [
+            {
+                "date": "09/09/2025",
+                "label": "Siembra en semillero"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "19",
+        "name": "Maiz (22)",
+        "date_start": "11/09/2025",
+        "date_end": "01/05/2026",
+        "color": "#ffff00",
+        "labels": [
+            {
+                "date": "11/09/2025",
+                "label": "Siembra(22) borde Este"
+            },
+            {
+                "date": "19/09/2025",
+                "label": "Inicio germinación"
+            },
+            {
+                "date": "24/09/2025",
+                "label": "hormigas!!"
+            }
+        ],
+        "images": [],
+        "fotos": [],
+        "info": "Hormigas comen varias"
+    },
+    {
+        "id": "20",
+        "name": "Rabanito (96)",
+        "date_start": "12/09/2025",
+        "date_end": "01/11/2025",
+        "color": "#b553d0",
+        "labels": [
+            {
+                "date": "12/09/2025",
+                "label": "siembra directa"
+            },
+            {
+                "date": "17/09/2025",
+                "label": "Germinan"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "21",
+        "name": "Rabanito Daikon (10)",
+        "date_start": "12/09/2025",
+        "date_end": "01/11/2025",
+        "color": "#b463d9",
+        "labels": [
+            {
+                "date": "12/09/2025",
+                "label": "siembra directa "
+            },
+            {
+                "date": "17/09/2025",
+                "label": "Germinan"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "22",
+        "name": "Aji dulce (58)",
+        "date_start": "15/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#ea5c1f",
+        "labels": [
+            {
+                "date": "15/09/2025",
+                "label": "Siembra semillero"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "23",
+        "name": "Morrón (48)",
+        "date_start": "15/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#ff0000",
+        "labels": [
+            {
+                "date": "15/09/2025",
+                "label": "Siembra en semillero"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "24",
+        "name": "Tomate redondo (14)",
+        "date_start": "15/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#ff0000",
+        "labels": [
+            {
+                "date": "15/09/2025",
+                "label": "Siembra maceta chica"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "25",
+        "name": "Perejil (7)",
+        "date_start": "15/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#00aa00",
+        "labels": [
+            {
+                "date": "15/09/2025",
+                "label": "Siembra maceta chica"
+            },
+            {
+                "date": "24/09/2025",
+                "label": "Trasplante cantero 3 (8)"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "26",
+        "name": "Albahaca (6)",
+        "date_start": "15/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#00ff00",
+        "labels": [
+            {
+                "date": "15/09/2025",
+                "label": "Siembra maceta chica"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "29",
+        "name": "Berenjena Florida (16)",
+        "date_start": "16/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#562eb2",
+        "labels": [
+            {
+                "date": "16/09/2025",
+                "label": "Siembra maceta"
+            }
+        ],
+        "images": []
+    },
+    {
+        "id": "30",
+        "name": "Albahaca (11)",
+        "date_start": "16/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#22ec22",
+        "labels": [
+            {
+                "date": "16/09/2025",
+                "label": "Siembra maceta"
+            }
+        ],
+        "images": []
+    },
+    {
+        "id": "31",
+        "name": "Perejil (6)",
+        "date_start": "16/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#0a850a",
+        "labels": [
+            {
+                "date": "16/09/2025",
+                "label": "siembra maceta"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "32",
+        "name": "Esponja vegetal (12)",
+        "date_start": "19/09/2025",
+        "date_end": "01/04/2025",
+        "color": "#ebd0a2",
+        "labels": [
+            {
+                "date": "19/09/2025",
+                "label": "Siembra en maceta"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "33",
+        "name": "Zuccini (11)",
+        "date_start": "21/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#a1ba32",
+        "labels": [
+            {
+                "date": "21/09/2025",
+                "label": "Siembra"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "34",
+        "name": "Pepino (6)",
+        "date_start": "21/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#106117",
+        "labels": [
+            {
+                "date": "21/09/2025",
+                "label": "Siembra"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "35",
+        "name": "Zapallo chaqueño (6)",
+        "date_start": "21/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#c48c1b",
+        "labels": [
+            {
+                "date": "21/09/2025",
+                "label": "Siembra"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "36",
+        "name": "Perejil (36)",
+        "date_start": "21/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#377537",
+        "labels": [
+            {
+                "date": "21/09/2025",
+                "label": "Siembra"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "37",
+        "name": "Rabanito daikon (36)",
+        "date_start": "21/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#00aa00",
+        "labels": [
+            {
+                "date": "21/09/2025",
+                "label": "Siembra cant 3"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "38",
+        "name": "Melón orgánico (8)",
+        "date_start": "28/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#b9c096",
+        "labels": [
+            {
+                "date": "28/09/2025",
+                "label": "Siembra en maceta"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "39",
+        "name": "Zuccini orgánico B (13)",
+        "date_start": "28/09/2025",
+        "date_end": "01/04/2026",
+        "color": "#a89a00",
+        "labels": [
+            {
+                "date": "28/09/2025",
+                "label": "Siembra en maceta"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    },
+    {
+        "id": "40",
+        "name": "Cuerno de cuarzo",
+        "date_start": "28/09/2025",
+        "date_end": "28/09/2025",
+        "color": "#a7aeaa",
+        "labels": [
+            {
+                "date": "28/09/2025",
+                "label": "Se entierra el cuerno con cuarzo"
+            }
+        ],
+        "images": [],
+        "fotos": []
+    }
+]
