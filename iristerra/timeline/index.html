@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>l&iacute;nea de tiempo</title>
+    <title>Iristerra - L&iacute;nea de tiempo</title>
     <style>
         body {
             margin: 0;
@@ -93,18 +93,23 @@
 
 
         .newEvent {
-     
-        display: block; 
+
+            display: block;
 
 
         }
-.logo{
-    top:8px;left:8px;position: fixed;z-index: 3000;
 
-}
-.logo img{
-    width:50px;
-}
+        .logo {
+            top: 8px;
+            left: 8px;
+            position: fixed;
+            z-index: 3000;
+
+        }
+
+        .logo img {
+            width: 50px;
+        }
 
         .images {
             display: flex;
@@ -258,69 +263,81 @@
             cursor: pointer;
         }
 
-   
-input{margin:0px 8px 8px 0;}
-*[contenteditable]{
-margin:1px;
-padding: 2px;
-border: 1px solid #6b9cc2; 
-display:  inline-block;
-}
+
+        input {
+            margin: 0px 8px 8px 0;
+        }
+
+        *[contenteditable] {
+            margin: 1px;
+            padding: 2px;
+            border: 1px solid #6b9cc2;
+            display: inline-block;
+        }
 
 
 
 
-.fases{
-      transform-origin:top left ;
-transform: scale(calc( 16 / 70 ));
-width:calc( 72px * 30 );
-    }
-    .fasesCont{
-        position:relative;
-        transform:translate(60px,130px);
-    }
-    .fases > div{
-      width:70px;height: 70px;display: inline-block;margin:1px 0px 0px 1px;
-      ;
-      background-image: url(moonthumb.png);
-      background-repeat: no-repeat;
-    }
+        .fases {
+            transform-origin: top left;
+            transform: scale(calc(16 / 70));
+            width: calc(72px * 30);
+        }
+
+        .fasesCont {
+            position: relative;
+            transform: translate(60px, 130px);
+        }
+
+        .fases>div {
+            width: 70px;
+            height: 70px;
+            display: inline-block;
+            margin: 1px 0px 0px 1px;
+            ;
+            background-image: url(moonthumb.png);
+            background-repeat: no-repeat;
+        }
 
 
-    .plantasNav{
-        position:fixed;
-        top:18px;
-        left:70px;
-    }
-    .plantasNav select{
-     padding:4px 16px;
-     border:1px solid #aaaaaa;
-     background-color: #eeeeee;
-    }
+        .plantasNav {
+            position: fixed;
+            top: 18px;
+            left: 70px;
+        }
 
+        .plantasNav select {
+            padding: 4px 16px;
+            border: 1px solid #aaaaaa;
+            background-color: #eeeeee;
+        }
     </style>
 </head>
 
 <body>
     <a href='editor.html' class='fixedBut editBut'>editar</a><br>
     <button class='saveBut'>Guardar cambios</button>
-<div class='logo'><img src="logo.png"></div>
-<div class='plantasNav'><select id='search'></select> . <input id='searchText' type='text' placeholder='buscar...'></input>  
-</div>
-<div class='fasesCont'><div class='fases'></div></div>
- 
+    <div class='logo'><img src="logo.png"></div>
+    <div class='plantasNav'><select id='search'></select> . <input id='searchText' type='text'
+            placeholder='buscar...'></input>
+    </div>
+    <div class='fasesCont'>
+        <div class='fases'></div>
+    </div>
 
 
 
- 
 
-<div style='position:fixed;width:30px;bottom:5px;left:5px;z-index: 100000;'><input type='checkbox' id="modeBtn" selected></input></div>
-<script>
-    const PREFIXURL='';//https://andreaescobarmusic.com/ex/iristerra/'
 
-</script>
-    <script  src='js/timeline.main.bundle.js?ar=BCD13'></script>
- 
+
+    <div style='position:fixed;width:30px;bottom:5px;left:5px;z-index: 100000;'><input type='checkbox' id="modeBtn"
+            selected></input></div>
+    <script>
+        const PREFIXURL = 'https://andreaescobarmusic.com/ex/iristerra/';//https://andreaescobarmusic.com/ex/iristerra/'
+
+    </script>
+    <script src='js/timeline.main.bundle.js?ar=BCD13'></script>
+
 </body>
 
 </html>

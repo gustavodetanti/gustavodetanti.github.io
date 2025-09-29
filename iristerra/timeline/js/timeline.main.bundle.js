@@ -230,7 +230,7 @@
     function borrarArchivo(filetodel) {
       const formData = new FormData();
       formData.append("filetodel", filetodel);
-      fetch("upload.php", {
+      fetch(PREFIXURL +"upload.php", {
         method: "POST",
         body: formData
       }).then((response) => response.json()).then((jsn) => console.log(jsn)).catch((e) => console.log(e));
@@ -283,7 +283,7 @@
       const formData = new FormData();
       formData.append("image", file);
       formData.append("prefix", obj.name || "plant");
-      fetch(PREFIXURL + "upload.php", {
+      fetch(PREFIXURL +PREFIXURL + "upload.php", {
         method: "POST",
         body: formData
       }).then((response) => response.json()).then((data) => {
@@ -629,7 +629,7 @@ ${plantasNav.map((f) => {
     }
     loadTimeline();
     function loadTimeline() {
-      fetch("timeline.json?r=" + Date.now().toString()).then((response) => response.json()).then((data) => {
+      fetch(PREFIXURL +"timeline.json?r=" + Date.now().toString()).then((response) => response.json()).then((data) => {
         ACTUALDATA = sortByDateStart(data);
         TIMELINE_DATA2 = [...ACTUALDATA];
         filterBy("todos");
@@ -730,7 +730,7 @@ ${plantasNav.map((f) => {
         return;
       saveBut.disabled = true;
       saveBut.classList.remove("active");
-      fetch("backend.php?file=timeline.json", {
+      fetch(PREFIXURL +"backend.php?file=timeline.json", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(ACTUALDATA, false, 4)
