@@ -11,7 +11,21 @@
     <meta name="author" content="Gustavo De Tanti">
 
 		<link type="text/css" rel="stylesheet" href="index.css">
-	 
+	 <style>
+
+/* Mobile first: oculto en pantallas chicas */
+ul.meseslist {
+  display: none;
+}
+
+/* Desktop y tablets grandes */
+@media (min-width: 768px) {
+  ul.meseslist {
+    display: inline-block;
+  }
+}
+
+   </style>
 		</head>
 
 		<body>
@@ -29,7 +43,7 @@
           </ul>
 
 <br>
-          <ul >
+          <ul  class='meseslist'>
       
         <li><span>立春</span><span>Lìchūn</span><span>Comienzo de la Primavera</span></li>
         <li><span>雨水</span><span>Yŭshuǐ</span><span>Agua de Lluvia</span></li>
@@ -44,7 +58,7 @@
         <li><span>小暑</span><span>Xiǎoshŭ</span><span>Pequeño Calor</span></li>
         <li><span>大暑</span><span>Dàshŭ</span><span>Gran Calor</span></li>
        </ul>
-       <ul>
+       <ul class='meseslist'>
         <li><span>立秋</span><span>Lìqiū</span><span>Comienzo del Otoño</span></li>
         <li><span>处暑</span><span>Chŭshŭ</span><span>Límite de Calor</span></li>
         <li><span>白露</span><span>Báilù</span><span>Rocío Blanco</span></li>
@@ -234,6 +248,55 @@
   
   </script>
 <script d-type="module" src='js/green.js'></script>
+<audio
+id="ney-audio"
+autoplay
+loop
+preload="auto"
+muted
+>
+<source src="audio/ney_026.ogg" type="audio/ogg">
+<source src="audio/ney_026.mp3" type="audio/mpeg">
+Tu navegador no soporta el elemento de audio HTML5.
+</audio>
+
+<script>
+// Algunos navegadores bloquean autoplay con sonido.
+// Esta lógica intenta reproducirlo al cargar.
+const audio = document.getElementById('ney-audio');
+
+audio.play().catch(() => {
+  // Si el autoplay con sonido está bloqueado,
+  // se puede desmutear tras la primera interacción del usuario
+  document.addEventListener('mousedown', () => {
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
+});
+</script>
+
+
+
+
+
+
+<script>
+  function updateMesesListVisibility() {
+    const mesesLists = document.querySelectorAll('ul.meseslist');
+    const isMobile = window.innerWidth < 768;
+
+    mesesLists.forEach(ul => {
+      ul.style.display = isMobile ? 'none' : 'inline-block';
+    });
+  }
+
+  // Ejecutar al cargar
+  window.addEventListener('DOMContentLoaded', updateMesesListVisibility);
+
+  // Ejecutar al redimensionar
+  window.addEventListener('resize', updateMesesListVisibility);
+</script>
+
 
  	</body>
 </html>
