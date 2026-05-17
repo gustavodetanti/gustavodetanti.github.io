@@ -429,8 +429,8 @@ export const chords = [
     },
     
     {
-        nota:"Add9",
-        type:"",
+        nota:"A",
+        type:"add9",
         strings:"6-x 5-0 4-2 3-4 2-2 1-0",
         fret:0,
         cejilla:0

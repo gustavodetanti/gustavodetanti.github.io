@@ -2,7 +2,7 @@ export const songs = [
 
 `simple
 4 4
-||Em | Am || 
+||E | Am | E | Am ||
 `,
 
 `Lunita Tucumana
@@ -33,7 +33,17 @@ export const songs = [
 
 
  `
-
+ ,
+ `x
+ 4 4
+ ||: Em :|| Am | Dm | Cmaj7 ||
+  
+  
+ 
+ 
+ 
+  `
+ 
 
 ];
 
