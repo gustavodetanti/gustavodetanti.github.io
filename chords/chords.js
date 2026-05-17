@@ -11,7 +11,14 @@ export const chords = [
         fret:0,
         cejilla:0
     },
-    
+    {
+        nota:"C#",
+        type:"",
+        strings:"6-x 5-3 4-5 3-5 2-5 1-x",
+        fret:4,
+        fretPos:3,
+        cejilla:0
+    },
     {
         nota:"D",
         type:"",
@@ -400,7 +407,13 @@ export const chords = [
         fret:0,
         cejilla:0
     },
-     
+    {
+        nota:"C",
+        type:"°",
+        strings:"6-x 5-3 4-4 3-2 2-4 1-x",
+        fret:0,
+        cejilla:0
+    },
     
     // =========================
     // EXTRA
