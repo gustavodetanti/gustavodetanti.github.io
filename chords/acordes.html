@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Acordes SVG</title>
+
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f4f4f4;
+        padding:30px;
+    }
+
+    .chords{
+        display:flex;
+        flex-wrap:wrap;
+        gap:24px;
+    }
+
+    .chord{
+        background:white;
+        padding:16px;
+        border-radius:10px;
+        box-shadow:0 2px 10px rgba(0,0,0,0.08);
+        width:140px;
+        text-align:center;
+    }
+
+    .chord-name{
+        font-size:22px;
+        font-weight:bold;
+        margin-bottom:10px;
+    }
+
+    svg{
+        overflow:visible;
+    }
+</style>
+</head>
+<body>
+
+<div class="chords" id="chords"></div>
+
+<script type='module'>
+
+import {chords} from "./chords.js";
+import {songs} from "./songs.js";
+import {createChordSVG} from "./createChords.js";
+
+import {showChordPopup} from "./showChordPopup.js";
+import {drawTuneChords} from "./drawTuneChords.js"
+
+
+const container = document.getElementById("chords");
+
+
+chords.forEach(chord => {
+    container.appendChild(createChordSVG(chord));
+});
+
+ 
+
+    //TUNES
+(()=>{
+    
+ 
+
+
+const tunes = parseTunes(songs);
+
+console.log(tunes);
+
+    // ==================================================
+    // CONFIG
+    // ==================================================
+
+    const MEASURE_W = 260;
+    const MEASURE_H = 65;
+
+    // mucho más espacio entre renglones
+    const LINE_GAP = 130;
+
+    const SVG_PADDING = 30;
+
+
+
+    // ==================================================
+    // ROOT
+    // ==================================================
+
+    const root = document.createElement("div");
+
+    root.className = "tunes";
+
+    document.body.appendChild(root);
+
+
+
+    // ==================================================
+    // SVG HELPERS
+    // ==================================================
+
+    const svgNS = "http://www.w3.org/2000/svg";
+
+
+
+    const line = (
+        svg,
+        x1,
+        y1,
+        x2,
+        y2,
+        w=2,color=false
+    )=>{
+
+        const l =
+            document.createElementNS(svgNS,"line");
+
+        l.setAttribute("x1",x1);
+        l.setAttribute("y1",y1);
+
+        l.setAttribute("x2",x2);
+        l.setAttribute("y2",y2);
+
+        l.setAttribute("stroke","black");
+        l.setAttribute("stroke-width",w);
+if(color)l.setAttribute("stroke",color);
+        svg.appendChild(l);
+
+        return l;
+    };
+
+
+
+    const text = (
+        svg,
+        str,
+        x,
+        y,
+        size=16,
+        anchor="start"
+    )=>{
+
+        const t =
+            document.createElementNS(svgNS,"text");
+
+        t.setAttribute("x",x);
+        t.setAttribute("y",y);
+
+        t.setAttribute("font-size",size);
+
+        t.setAttribute("text-anchor",anchor);
+
+        t.setAttribute("font-family","Arial");
+
+        t.textContent = str;
+
+        svg.appendChild(t);
+
+        return t;
+    };
+
+
+
+    const circle = (
+        svg,
+        x,
+        y,
+        r=3
+    )=>{
+
+        const c =
+            document.createElementNS(svgNS,"circle");
+
+        c.setAttribute("cx",x);
+        c.setAttribute("cy",y);
+
+        c.setAttribute("r",r);
+
+        c.setAttribute("fill","black");
+
+        svg.appendChild(c);
+
+        return c;
+    };
+
+
+
+    // ==================================================
+    // DRAW TUNES
+    // ==================================================
+
+    tunes.forEach(tune=>{
+
+        const wrap =
+            document.createElement("div");
+
+        wrap.style.margin = "40px 20px 40px 0px";
+        wrap.style.border = "1px solid #222222";
+        wrap.style.padding = "20px";
+        wrap.style.background = "#efefef";
+                
+
+
+
+        const title =
+            document.createElement("h2");
+
+        title.textContent = tune.name;
+
+        wrap.appendChild(title);
+
+
+
+        const rows =
+            Math.ceil(
+                tune.score.length /
+                tune.maxLine
+            );
+
+
+
+        const svgW =
+            (tune.maxLine * MEASURE_W) +
+            (SVG_PADDING * 2);
+
+
+
+        const svgH =
+            (rows * LINE_GAP) +
+            100;
+
+
+
+        const svg =
+            document.createElementNS(svgNS,"svg");
+
+        svg.setAttribute("width",svgW);
+        svg.setAttribute("height",svgH);
+
+
+
+        // ==========================================
+        // MEASURES
+        // ==========================================
+
+        tune.score.forEach((measure,i)=>{
+
+            const col =
+                i % tune.maxLine;
+
+            const row =
+                Math.floor(i / tune.maxLine);
+
+
+
+            const x =
+                SVG_PADDING +
+                (col * MEASURE_W);
+
+
+
+            const y =
+                50 +
+                (row * LINE_GAP);
+
+
+
+            // ======================================
+            // MAIN RECT
+            // ======================================
+
+            line(svg,x,y,x+MEASURE_W,y);
+
+            line(
+                svg,
+                x,
+                y+MEASURE_H,
+                x+MEASURE_W,
+                y+MEASURE_H
+            );
+
+            line(svg,x,y,x,y+MEASURE_H);
+
+            line(
+                svg,
+                x+MEASURE_W,
+                y,
+                x+MEASURE_W,
+                y+MEASURE_H
+            );
+
+
+ 
+      // ======================================
+// BEAT MARKS
+// pequeñas e inclinadas
+// ======================================
+
+const beatW =
+    MEASURE_W / measure.beats;
+
+
+// ahora dibuja EXACTAMENTE la cantidad
+// de beats del compás
+
+for(let b=0;b<measure.beats;b++){
+
+    const bx =
+        x +
+        (b * beatW) +
+        (beatW * 0.5);
+
+    line(
+        svg,
+
+        bx - 3,
+        y + 25,
+
+        bx + 3,
+        y + 40,
+
+        2.5,"rgb(160,160,160)"
+    );
+}
+
+
+
+            // ======================================
+            // CHORDS
+            // alineados al inicio
+            // ======================================
+
+            const chordCount =
+                measure.chords.length;
+
+
+
+            const chordStep =
+                MEASURE_W / chordCount;
+
+
+/*
+            measure.chords.forEach((chord,cIndex)=>{
+
+                const cx =
+                    x +
+                    (cIndex * chordStep) +
+                    8;
+
+                text(
+                    svg,
+                    chord,
+                    cx,
+                    y - 16,
+                    18,
+                    "start"
+                );
+            });*/
+
+            
+
+            measure.chords.forEach((chord,cIndex)=>{
+
+const cx =
+    x +
+    (cIndex * chordStep) +
+    8;
+
+
+
+// ==============================
+// SVG TEXT
+// ==============================
+
+const chordText = text(
+    svg,
+    chord,
+    cx,
+    y - 16,
+    18,
+    "start"
+);
+
+
+
+// ==============================
+// STYLE
+// ==============================
+
+chordText.style.cursor = "pointer";
+
+chordText.style.userSelect = "none";
+
+
+
+// ==============================
+// CLICK
+// ==============================
+
+chordText.addEventListener("click",()=>{
+
+    showChordPopup(chord);
+
+});
+
+});
+
+
+
+
+            // ======================================
+            // START
+            // ======================================
+
+            if(measure.start === true){
+
+                line(
+                    svg,
+                    x+5,
+                    y,
+                    x+5,
+                    y+MEASURE_H,
+                    3
+                );
+            }
+
+
+
+            if(measure.start === "repeat"){
+
+                line(
+                    svg,
+                    x+5,
+                    y,
+                    x+5,
+                    y+MEASURE_H,
+                    3
+                );
+/*
+                line(
+                    svg,
+                    x+12,
+                    y,
+                    x+12,
+                    y+MEASURE_H,
+                    1.5
+                );*/
+
+                circle(svg,x+15,y+25,3);
+
+                circle(svg,x+15,y+40,3);
+            }
+
+
+
+            // ======================================
+            // END
+            // ======================================
+
+            if(measure.end === true){
+
+                line(
+                    svg,
+                    x+MEASURE_W-5,
+                    y,
+                    x+MEASURE_W-5,
+                    y+MEASURE_H,
+                    3
+                );
+            }
+
+
+
+            if(measure.end === "repeat"){
+
+                line(
+                    svg,
+                    x+MEASURE_W-5,
+                    y,
+                    x+MEASURE_W-5,
+                    y+MEASURE_H,
+                    3
+                );
+
+            /*    line(
+                    svg,
+                    x+MEASURE_W-12,
+                    y,
+                    x+MEASURE_W-12,
+                    y+MEASURE_H,
+                    1.5
+                );
+*/
+                circle(
+                    svg,
+                    x+MEASURE_W-15,
+                    y+25,
+                    3
+                );
+
+                circle(
+                    svg,
+                    x+MEASURE_W-15,
+                    y+40,
+                    3
+                );
+            }
+
+        });
+
+
+
+        wrap.appendChild(svg);
+        drawTuneChords(tune,wrap)
+        root.appendChild(wrap);
+
+    });
+
+})();
+
+function parseTunes(strings){
+
+return strings.map(str=>{
+
+    // ==========================================
+    // CLEAN LINES
+    // ==========================================
+
+    const lines =
+        str
+        .split("\n")
+        .map(v=>v.trim())
+        .filter(v=>v);
+
+
+
+    // ==========================================
+    // HEADER
+    // ==========================================
+
+    const name = lines[0];
+
+    const [beats,maxLine] =
+        lines[1]
+        .split(/\s+/)
+        .map(Number);
+
+
+
+    // ==========================================
+    // SCORE
+    // ==========================================
+
+    const score = [];
+
+
+
+    // ==========================================
+    // FLAGS
+    // ==========================================
+
+    let pendingStart = null;
+
+
+
+    // ==========================================
+    // PARSE SCORE
+    // ==========================================
+
+    lines
+    .slice(2)
+    .forEach(line=>{
+
+        // ======================================
+        // TOKENIZE
+        // ======================================
+
+        const tokens =
+            line.match(
+                /\|\|:|:\|\||\|\||\||[^|:]+(?:\s+[^|:]+)*/g
+            ) || [];
+
+
+
+        tokens.forEach(token=>{
+
+            token = token.trim();
+
+            if(!token){
+                return;
+            }
+
+
+
+            // ==================================
+            // START REPEAT
+            // ||:
+            // ==================================
+
+            if(token === "||:"){
+
+                pendingStart = "repeat";
+                return;
+            }
+
+
+
+            // ==================================
+            // END REPEAT
+            // :||
+            // ==================================
+
+            if(token === ":||"){
+
+                if(score.length){
+
+                    score[
+                        score.length - 1
+                    ].end = "repeat";
+                }
+
+                return;
+            }
+
+
+
+            // ==================================
+            // DOUBLE BAR ||
+            // ==================================
+
+            if(token === "||"){
+
+                // si el último compás
+                // todavía NO tiene end
+                // => este || es cierre
+
+                if(
+                    score.length &&
+                    !score[
+                        score.length - 1
+                    ].end
+                ){
+
+                    score[
+                        score.length - 1
+                    ].end = true;
+                }
+
+                // si no
+                // => apertura
+
+                else{
+
+                    pendingStart = true;
+                }
+
+                return;
+            }
+
+
+
+            // ==================================
+            // SIMPLE BAR
+            // ==================================
+
+            if(token === "|"){
+                return;
+            }
+
+
+
+            // ==================================
+            // INLINE :||
+            //
+            // ejemplo:
+            // "A7sus A7 :||"
+            // ==================================
+
+            let end = null;
+
+            if(token.endsWith(":||")){
+
+                end = "repeat";
+
+                token =
+                    token
+                    .replace(/:\|\|$/,"")
+                    .trim();
+            }
+
+
+
+            // ==================================
+            // INLINE ||
+            //
+            // ejemplo:
+            // "Am ||"
+            // ==================================
+
+            else if(token.endsWith("||")){
+
+                end = true;
+
+                token =
+                    token
+                    .replace(/\|\|$/,"")
+                    .trim();
+            }
+
+
+
+            // ==================================
+            // CHORDS
+            // ==================================
+
+            const chords =
+                token
+                .split(/\s+/)
+                .filter(v=>v);
+
+
+
+            if(!chords.length){
+                return;
+            }
+
+
+
+            // ==================================
+            // OBJECT
+            // ==================================
+
+            const obj = {
+                beats,
+                chords
+            };
+
+
+
+            // ==================================
+            // APPLY START
+            // ==================================
+
+            if(pendingStart){
+
+                obj.start = pendingStart;
+
+                pendingStart = null;
+            }
+
+
+
+            // ==================================
+            // APPLY END
+            // ==================================
+
+            if(end){
+
+                obj.end = end;
+            }
+
+
+
+            score.push(obj);
+
+        });
+
+    });
+
+
+
+    // ==========================================
+    // RESULT
+    // ==========================================
+
+    return {
+        name,
+        maxLine,
+        score
+    };
+
+});
+
+}
+ 
+
+
+let XX=[
+`simple
+4
+||Em | Am ||  
+`
+,
+`lunita
+3
+||E7 | Am | E7 | Am A7 |
+||: Dm  |  Am | E7 | Am  :||
+`
+]
+
+
+
+
+</script>
+
+</body>
+</html>
