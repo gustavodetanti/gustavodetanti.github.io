@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chord Library</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+    margin:0;
+    padding:30px;
+}
+
+.toolbarGroup{
+    margin-bottom:24px;
+}
+
+.toolbarTitle{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.toolbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+button{
+    padding:10px 14px;
+    border:none;
+    border-radius:8px;
+    background:white;
+    cursor:pointer;
+    font-size:14px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    transition:.15s;
+}
+
+button:hover{
+    background:#ddd;
+}
+
+button.active{
+    background:black;
+    color:white;
+}
+
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    width:190px;
+    background:white;
+    border-radius:14px;
+    padding:10px;
+    box-shadow:0 4px 14px rgba(0,0,0,.12);
+}
+
+.title{
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="toolbarGroup">
+
+    <div class="toolbarTitle">
+        Nota
+    </div>
+
+    <div class="toolbar notesToolbar"></div>
+
+</div>
+
+
+
+<div class="toolbarGroup">
+
+    <div class="toolbarTitle">
+        Tipo de acorde
+    </div>
+
+    <div class="toolbar typesToolbar"></div>
+
+</div>
+
+
+
+<div class="toolbarGroup">
+
+    <div class="toolbarTitle">
+        Actions
+    </div>
+
+    <div class="toolbar actionsToolbar"></div>
+
+</div>
+
+
+
+<div class="grid"></div>
+
+
+
+<script type="module">
+
+import { chords } from "./chords.js";
+
+
+
+const STRING_SPACING = 20;
+const FRET_SPACING = 50;
+
+const SVG_WIDTH = 170;
+const SVG_HEIGHT = 340;
+
+const START_X = 30;
+const START_Y = 40;
+
+const STRINGS = 6;
+const FRETS = 6;
+
+const svgNS = "http://www.w3.org/2000/svg";
+
+
+
+const grid =
+    document.querySelector(".grid");
+
+const notesToolbar =
+    document.querySelector(".notesToolbar");
+
+const typesToolbar =
+    document.querySelector(".typesToolbar");
+
+const actionsToolbar =
+    document.querySelector(".actionsToolbar");
+
+
+
+// ============================================
+// FILTER STATE
+// ============================================
+
+const activeNotes =
+    new Set();
+
+const activeTypes =
+    new Set();
+
+
+
+// ============================================
+// HELPERS
+// ============================================
+
+function line(
+    svg,
+    x1,
+    y1,
+    x2,
+    y2,
+    w=2
+){
+
+    const l =
+        document.createElementNS(svgNS,"line");
+
+    l.setAttribute("x1",x1);
+    l.setAttribute("y1",y1);
+
+    l.setAttribute("x2",x2);
+    l.setAttribute("y2",y2);
+
+    l.setAttribute("stroke","black");
+    l.setAttribute("stroke-width",w);
+
+    svg.appendChild(l);
+
+    return l;
+}
+
+
+
+function circle(
+    svg,
+    x,
+    y,
+    r=5,
+    fill="black"
+){
+
+    const c =
+        document.createElementNS(svgNS,"circle");
+
+    c.setAttribute("cx",x);
+    c.setAttribute("cy",y);
+
+    c.setAttribute("r",r);
+
+    c.setAttribute("fill",fill);
+
+    svg.appendChild(c);
+
+    return c;
+}
+
+
+
+function text(
+    svg,
+    str,
+    x,
+    y,
+    size=16,
+    anchor="middle"
+){
+
+    const t =
+        document.createElementNS(svgNS,"text");
+
+    t.setAttribute("x",x);
+    t.setAttribute("y",y);
+
+    t.setAttribute("font-size",size);
+
+    t.setAttribute("font-family","Arial");
+
+    t.setAttribute("text-anchor",anchor);
+
+    t.textContent = str;
+
+    svg.appendChild(t);
+
+    return t;
+}
+
+
+
+// ============================================
+// DRAW CHORD
+// ============================================
+
+function drawChord(chord){
+
+    const card =
+        document.createElement("div");
+
+    card.className = "card";
+
+
+
+    // TITLE
+
+    const title =
+        document.createElement("div");
+
+    title.className = "title";
+
+    title.textContent =
+        `${chord.nota}${chord.type}${chord.bass ? "/" + chord.bass : ""}`;
+
+    card.appendChild(title);
+
+
+
+    // SVG
+
+    const svg =
+        document.createElementNS(svgNS,"svg");
+
+    svg.setAttribute("width",SVG_WIDTH);
+
+    svg.setAttribute("height",SVG_HEIGHT);
+
+
+
+    // STRINGS
+
+    for(let i=0;i<STRINGS;i++){
+
+        const x =
+            START_X +
+            (i * STRING_SPACING);
+
+        line(
+            svg,
+            x,
+            START_Y,
+            x,
+            START_Y +
+            ((FRETS-1) * FRET_SPACING),
+            1.5
+        );
+    }
+
+
+
+    // FRETS
+
+    for(let i=0;i<FRETS;i++){
+
+        const y =
+            START_Y +
+            (i * FRET_SPACING);
+
+        line(
+            svg,
+            START_X,
+            y,
+
+            START_X +
+            ((STRINGS-1) * STRING_SPACING),
+
+            y,
+
+            (
+                i === 0 &&
+                chord.fret === 0
+            )
+            ? 4
+            : 1.5
+        );
+    }
+
+
+
+    // CEJILLA
+
+    if(
+        chord.cejilla &&
+        chord.cejilla > 0
+    ){
+
+        let startString = 6;
+        let endString = 1;
+
+        if(
+            chord.cejillaPos &&
+            chord.cejillaPos !== 0 &&
+            chord.cejillaPos !== "full"
+        ){
+
+            const parts =
+                chord.cejillaPos.split("-");
+
+            startString =
+                parseInt(parts[0]);
+
+            endString =
+                parseInt(parts[1]);
+        }
+
+        const startIndex =
+            6 - startString;
+
+        const endIndex =
+            6 - endString;
+
+        const x1 =
+            START_X +
+            (startIndex * STRING_SPACING) -
+            8;
+
+        const x2 =
+            START_X +
+            (endIndex * STRING_SPACING) +
+            8;
+
+        const y =
+            START_Y +
+            ((chord.cejilla - 1) * FRET_SPACING) +
+            (FRET_SPACING * .5);
+
+        line(svg,x1,y,x2,y,10);
+    }
+
+
+
+    // NOTES
+
+    const stringData =
+        chord.strings.split(" ");
+
+
+
+    stringData.forEach(item=>{
+
+        const [stringNumber,fretValue] =
+            item.split("-");
+
+        const stringIndex =
+            6 - parseInt(stringNumber);
+
+        const x =
+            START_X +
+            (stringIndex * STRING_SPACING);
+
+
+
+        if(fretValue === "x"){
+
+            text(
+                svg,
+                "X",
+                x,
+                START_Y - 12,
+                14
+            );
+
+            return;
+        }
+
+
+
+        if(fretValue === "n"){
+            return;
+        }
+
+
+
+        const fret =
+            parseInt(fretValue);
+
+
+
+        if(fret === 0){
+
+            circle(
+                svg,
+                x,
+                START_Y - 12,
+                5,
+                "white"
+            );
+
+            const outline =
+                document.createElementNS(svgNS,"circle");
+
+            outline.setAttribute("cx",x);
+
+            outline.setAttribute("cy",START_Y - 12);
+
+            outline.setAttribute("r",5);
+
+            outline.setAttribute("fill","none");
+
+            outline.setAttribute("stroke","black");
+
+            outline.setAttribute("stroke-width","1.5");
+
+            svg.appendChild(outline);
+
+            return;
+        }
+
+
+
+        const y =
+            START_Y +
+            ((fret - 1) * FRET_SPACING) +
+            (FRET_SPACING * .5);
+
+        circle(svg,x,y,6);
+
+    });
+
+
+
+    // FRET NUMBER
+
+    if(chord.fret > 1){
+
+        const pos =
+            chord.fretPos || 1;
+
+        const y =
+            START_Y +
+            ((pos - 1) * FRET_SPACING) +
+            (FRET_SPACING * .5) +
+            5;
+
+        text(
+            svg,
+            chord.fret,
+            START_X - 20,
+            y,
+            16
+        );
+    }
+
+
+
+    card.appendChild(svg);
+
+    return card;
+}
+
+
+
+// ============================================
+// FILTER LOGIC
+// ============================================
+
+function getFilteredChords(){
+
+    return chords.filter(chord=>{
+
+        const noteOk =
+            activeNotes.size === 0 ||
+            activeNotes.has(chord.nota);
+
+        const typeOk =
+            activeTypes.size === 0 ||
+            activeTypes.has(chord.type);
+
+        return noteOk && typeOk;
+
+    });
+
+}
+
+
+
+// ============================================
+// RENDER
+// ============================================
+
+function render(){
+
+    grid.innerHTML = "";
+
+    const filtered =
+        getFilteredChords();
+
+
+
+    filtered.forEach(chord=>{
+
+        grid.appendChild(
+            drawChord(chord)
+        );
+
+    });
+
+}
+
+
+
+// ============================================
+// FILTER BUTTON
+// ============================================
+
+function createFilterButton(
+    parent,
+    label,
+    set,
+    value
+){
+
+    const btn =
+        document.createElement("button");
+
+    btn.textContent = label;
+
+
+
+    btn.addEventListener("click",()=>{
+
+        if(set.has(value)){
+
+            set.delete(value);
+
+            btn.classList.remove("active");
+        }
+
+        else{
+
+            set.add(value);
+
+            btn.classList.add("active");
+        }
+
+        render();
+
+    });
+
+
+
+    parent.appendChild(btn);
+
+}
+
+
+
+// ============================================
+// NOTE FILTERS
+// ============================================
+
+const noteFilters =
+    [...new Set(
+        chords.map(c=>c.nota)
+    )]
+    .sort();
+
+
+
+noteFilters.forEach(note=>{
+
+    createFilterButton(
+        notesToolbar,
+        note,
+        activeNotes,
+        note
+    );
+
+});
+
+
+
+// ============================================
+// TYPE FILTERS
+// ============================================
+
+const typeFilters =
+    [...new Set(
+        chords.map(c=>c.type)
+    )]
+    .sort();
+
+
+
+typeFilters.forEach(type=>{
+
+    createFilterButton(
+        typesToolbar,
+        type || "Major",
+        activeTypes,
+        type
+    );
+
+});
+
+
+
+// ============================================
+// CLEAR BUTTON
+// ============================================
+
+const clearBtn =
+    document.createElement("button");
+
+clearBtn.textContent = "Clear Filters";
+
+
+
+clearBtn.addEventListener("click",()=>{
+
+    activeNotes.clear();
+
+    activeTypes.clear();
+
+
+
+    document
+    .querySelectorAll("button")
+    .forEach(btn=>{
+
+        btn.classList.remove("active");
+
+    });
+
+    
+
+    render();
+
+});
+
+
+
+actionsToolbar.appendChild(clearBtn);
+
+
+
+// ============================================
+// INIT
+// ============================================
+
+render();
+
+</script>
+
+</body>
+</html>
